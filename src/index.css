@@ -1,0 +1,40 @@
+:root {
+  --gray-950: #27272a;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-400: #9ca3af;
+  --gray-50: #f9fafb;
+
+  --gray-600A: rgba(75, 85, 99, 0.5);
+
+  --blue-700: #1d4ed8;
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+
+  --red-500: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  /** TODO: Change the default font-family */
+  /** TODO: Change the default background color */
+  /** TODO: Change the default text color */
+}
+
+input[type="checkbox"] {
+  /** TODO: Change the default checkbox input */
+}

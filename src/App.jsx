@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="h-full min-h-screen bg-gray-950">
-      <div className="mx-auto w-full max-w-[600px] px-5 pt-10">
+      <div className="mx-auto w-full max-w-[600px] px-5 py-10">
         <h1 className="mb-4 text-2xl font-medium text-white">Minhas Tarefas</h1>
         <TaskForm onSubmit={(formDate) => handleSubmit(formDate)}></TaskForm>
 

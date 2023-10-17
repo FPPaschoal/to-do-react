@@ -30,7 +30,7 @@ function TaskForm({ onSubmit }) {
       />
       <button
         type="submit"
-        className="ring-focus whitespace-nowrap  rounded-lg border-blue-700 bg-blue-700 px-4 py-3 text-sm font-medium text-gray-50 "
+        className="ring-focus whitespace-nowrap  rounded-lg border-blue-700 bg-blue-700 px-4 py-3 text-sm font-medium text-gray-50 transition-colors duration-300 hover:bg-blue-600"
       >
         Criar Tarefa
       </button>

@@ -1,3 +1,9 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "task": "Passear com o cachorro",
+      "done": false,
+      "id": 1
+    }
+  ]
 }

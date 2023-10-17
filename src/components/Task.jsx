@@ -7,7 +7,7 @@ function Task({ task, onCheckedChange, onDelete }) {
   }
 
   return (
-    <div className="flex w-full items-start justify-between rounded-lg border border-gray-700 bg-gray-800 p-4 transition-opacity [&:has(input:checked)]:opacity-50">
+    <li className="flex w-full items-start justify-between rounded-lg border border-gray-700 bg-gray-800 p-4 transition-opacity [&:has(input:checked)]:opacity-50">
       <div className="flex w-full gap-4">
         <CheckBox
           onChange={handleChange}
@@ -23,7 +23,7 @@ function Task({ task, onCheckedChange, onDelete }) {
       >
         <Trash2 size={16} />
       </button>
-    </div>
+    </li>
   );
 }
 

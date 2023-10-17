@@ -1,11 +1,9 @@
-import { stringify } from "postcss";
-import styles from "./App.module.css";
 import CheckBox from "./components/CheckBox";
 import TaskForm from "./components/TaskForm";
 import Task from "./components/Task";
 import { useEffect, useState } from "react";
 
-const BASE_URL = "http://localhost:3333/tasks";
+const URL = "http://localhost:3333/tasks/";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -13,8 +11,6 @@ function App() {
   const [doneTasks, setDoneTasks] = useState(false);
 
   const filteredTasks = doneTasks ? tasks.filter((task) => !task.done) : tasks;
-
-  const URL = "http://localhost:3333/tasks/";
 
   useEffect(() => {
     fetch(URL)
@@ -46,7 +42,9 @@ function App() {
       method: "PATCH",
       body: JSON.stringify({ done: done }),
     });
-    const newTasks = tasks.map((t) => (t.id === id ? { ...t, done: done } : t));
+    const newTasks = tasks.map((task) =>
+      task.id === id ? { ...task, done: done } : task,
+    );
 
     setTasks(newTasks);
   }
@@ -66,7 +64,9 @@ function App() {
         <TaskForm onSubmit={(formDate) => handleSubmit(formDate)}></TaskForm>
 
         {isLoading ? (
-          <p className="mt-12 text-sm text-gray-50">Buscando tarefas...</p>
+          <p className="mt-14 text-sm font-bold text-gray-400">
+            Buscando tarefas...
+          </p>
         ) : !tasks.length ? (
           <p className="mt-14 text-sm font-bold text-gray-400">
             Nenhuma tarefa foi adicionada
